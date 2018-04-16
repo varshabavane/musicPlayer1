@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Media } from '@ionic-native/media'
 
 // for showing progress bar
 //import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
@@ -28,7 +29,10 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Media
+  
   ]
+  
 })
 export class AppModule {}
