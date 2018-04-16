@@ -11,13 +11,13 @@ import { FileChooser } from '@ionic-native/file-chooser';
 import { FilePath} from '@ionic-native/file-path';
 
 // for showing progress bar
-//import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
+import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    //ProgressBarComponent
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
