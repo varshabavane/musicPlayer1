@@ -6,7 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { Media } from '@ionic-native/media'
+import { Media } from '@ionic-native/media';
+import { FileChooser } from '@ionic-native/file-chooser'; 
+import { FilePath} from '@ionic-native/file-path';
 
 // for showing progress bar
 //import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
@@ -30,7 +32,10 @@ import { Media } from '@ionic-native/media'
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Media
+    Media,
+    FileChooser,
+    FilePath
+
   
   ]
   
