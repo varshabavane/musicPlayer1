@@ -8,7 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Media } from '@ionic-native/media';
 import { FileChooser } from '@ionic-native/file-chooser'; 
-import { FilePath} from '@ionic-native/file-path';
+//import { FilePath} from '@ionic-native/file-path';
 
 // for showing progress bar
 import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
@@ -34,7 +34,7 @@ import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Media,
     FileChooser,
-    FilePath
+    
 
   
   ]

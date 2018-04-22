@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
 import { Media, MediaObject } from "@ionic-native/media";
 import { FileChooser } from "@ionic-native/file-chooser";
-import { FilePath } from "@ionic-native/file-path";
+// import { FilePath } from "@ionic-native/file-path";
 
 @Component({
   selector: "page-home",
@@ -20,56 +20,56 @@ export class HomePage {
   constructor(
     public navCtrl: NavController,
     private fileChooser: FileChooser,
-    private filePath: FilePath,
+    // private filePath: FilePath,
     private media: Media
   ) {
     this.tracks = [
       {
         title: "hrudyat vaje smthng",
         artist: "rohit raut",
-        playing: "false",
+        playing: false,
         songPath: "/android_asset/www/assets/songs/hrudyat vaje smthng.mp3",
-        progress: "0",
+        progress:0,
         img: "/android_asset/www/assets/imgs/2.jpg"
       },
       {
         title: "love u zindagi",
         artist: "alia",
-        playing: "false",
+        playing:false,
         songPath: "/android_asset/www/assets/songs/lvuZindgi.mp3",
-        progress: "0",
+        progress: 0,
         img: "/android_asset/www/assets/imgs/3.jpg"
       },
       {
         title: "pahli najarme",
         artist: "avdutgupte",
-        playing: "false",
+        playing: false,
         songPath: "/android_asset/www/assets/songs/pahlinajarme.mp3",
-        progress: "0",
+        progress: 0,
         img: "/android_asset/www/assets/imgs/2.jpg"
       },
       {
         title: "Gannayka dj",
         artist: "",
-        playing: "false",
+        playing:false,
         songPath: "/android_asset/www/assets/songs/gannayka.mp3",
-        progress: "0",
+        progress: 0,
         img: "/android_asset/www/assets/imgs/3.jpg"
       },
       {
         title: "tik-tik",
         artist: "atif aslam",
-        playing: "false",
+        playing: false,
         songPath: "/android_asset/www/assets/songs/tik-tik.mp3",
-        progress: "0",
+        progress: 0,
         img: "/android_asset/www/assets/imgs/4.jpg"
       },
       {
         title: "sojajara",
         artist: "papon",
-        playing: "false",
+        playing: false,
         songPath: "/android_asset/www/assets/songs/sojajara.mp3",
-        progress: "0",
+        progress: 0,
         img: "/android_asset/www/assets/imgs/1.jpg"
       }
     ];
@@ -119,9 +119,9 @@ export class HomePage {
   // }
 
   playTrack(track) {
-    for (this.currentTrack of this.tracks) {
-      if (this.currentTrack.playing) {
-        this.pauseTrack(this.currentTrack);
+    for (let checktrack of this.tracks) {
+      if (checktrack.playing) {
+        this.pauseTrack(checktrack);
       }
     }
     track.playing = true;
@@ -130,7 +130,7 @@ export class HomePage {
     this.music.play();
     this.progressInterval = setInterval(() => {
      this.currentTrack.progress < 100 ? this.currentTrack.progress++ : (this.currentTrack.progress = 0);
-    }, 1000);
+    }, 10000);
   }
 
   pauseTrack(track) {
